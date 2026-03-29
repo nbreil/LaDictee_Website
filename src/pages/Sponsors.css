@@ -1,0 +1,173 @@
+.sponsor-tier {
+  margin-bottom: 56px;
+}
+
+.sponsor-tier:last-child {
+  margin-bottom: 0;
+}
+
+.tier-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gray-500);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sponsors-grid {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+}
+
+.tier-gold {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tier-silver {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.tier-bronze {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.tier-gold .sponsor-card {
+  padding: 40px 32px;
+}
+
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--color-gray-100);
+  color: var(--color-marine);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.tier-gold .sponsor-logo {
+  width: 88px;
+  height: 88px;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #F5E6B8, #C9A84C);
+  color: var(--color-marine-dark);
+}
+
+.tier-silver .sponsor-logo {
+  background: linear-gradient(135deg, #E8E8E8, #B8B8B8);
+  color: var(--color-marine-dark);
+}
+
+.sponsor-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.sponsor-tier-section {
+  margin-bottom: 56px;
+}
+
+.tier-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.tier-label-gold {
+  color: var(--color-accent);
+}
+
+.tier-label-silver {
+  color: var(--color-gray-500);
+}
+
+.sponsors-grid-real {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.sponsors-grid-gold {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.sponsors-grid-real .sponsor-card {
+  text-decoration: none;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.sponsors-grid-real .sponsor-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.sponsor-card-gold {
+  border-color: #E0C97A;
+}
+
+.sponsor-logo-img {
+  width: 100%;
+  max-width: 140px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.sponsor-cta {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.sponsor-cta h2 {
+  font-size: 2rem;
+  color: var(--color-marine);
+  margin-bottom: 16px;
+}
+
+.sponsor-cta p {
+  font-size: 1.05rem;
+  color: var(--color-gray-500);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .tier-gold,
+  .tier-silver {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+
+  .tier-bronze {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

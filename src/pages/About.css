@@ -1,0 +1,131 @@
+/* Story */
+.about-story {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.story-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-gray-700);
+  margin-bottom: 20px;
+}
+
+.story-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mission */
+.about-mission {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-quote {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-marine);
+  padding: 32px;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-white);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+
+/* Values */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.value-card {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.value-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(10, 46, 92, 0.06);
+  color: var(--color-marine);
+  margin-bottom: 16px;
+}
+
+.value-card h3 {
+  font-size: 1.15rem;
+  color: var(--color-marine);
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: var(--color-gray-500);
+  line-height: 1.6;
+}
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-card {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.team-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-marine), var(--color-marine-light));
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.team-card h3 {
+  font-size: 1rem;
+  color: var(--color-gray-900);
+  margin-bottom: 4px;
+}
+
+.team-card p {
+  font-size: 0.85rem;
+  color: var(--color-gray-500);
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .mission-quote {
+    font-size: 1.15rem;
+    padding: 24px;
+  }
+}

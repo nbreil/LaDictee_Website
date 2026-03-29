@@ -1,0 +1,251 @@
+/* ============================================
+   La Dictée — Global Styles
+   Palette: Marine blue (#0A2E5C) & white
+   Typography: Playfair Display (headings) + Inter (body)
+   ============================================ */
+
+:root {
+  --color-marine: #0A2E5C;
+  --color-marine-light: #143D73;
+  --color-marine-dark: #061D3A;
+  --color-accent: #C9A84C;
+  --color-accent-light: #E0C97A;
+  --color-white: #FFFFFF;
+  --color-off-white: #F7F8FA;
+  --color-gray-100: #F0F1F4;
+  --color-gray-200: #E1E3E8;
+  --color-gray-300: #C5C8D0;
+  --color-gray-500: #6B7080;
+  --color-gray-700: #3A3F4B;
+  --color-gray-900: #1A1D24;
+
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+
+  --max-width: 1200px;
+  --nav-height: 72px;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(10, 46, 92, 0.08);
+  --shadow-md: 0 4px 16px rgba(10, 46, 92, 0.1);
+  --shadow-lg: 0 8px 32px rgba(10, 46, 92, 0.12);
+  --transition: 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-gray-900);
+  background: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--color-marine);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: var(--color-marine-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-marine);
+  border: 1.5px solid var(--color-marine);
+}
+
+.btn-secondary:hover {
+  background: var(--color-marine);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-marine-dark);
+}
+
+.btn-accent:hover {
+  background: var(--color-accent-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   Page sections
+   ============================================ */
+
+.page-header {
+  text-align: center;
+  padding: 100px 24px 60px;
+  background: linear-gradient(135deg, var(--color-marine) 0%, var(--color-marine-light) 100%);
+  color: var(--color-white);
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.page-header p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.section {
+  padding: 80px 24px;
+}
+
+.section-alt {
+  background: var(--color-off-white);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--color-marine);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Form elements
+   ============================================ */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color var(--transition);
+  background: var(--color-white);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-marine);
+  box-shadow: 0 0 0 3px rgba(10, 46, 92, 0.1);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 80px 20px 48px;
+  }
+
+  .page-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .section {
+    padding: 56px 20px;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+    margin-bottom: 32px;
+  }
+}
