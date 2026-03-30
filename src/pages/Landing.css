@@ -7,7 +7,7 @@
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(150deg, var(--color-marine-dark) 0%, var(--color-marine) 50%, var(--color-marine-light) 100%);
+  background: url('/ladictee_group_image.png') center center / cover no-repeat;
   color: var(--color-white);
   overflow: hidden;
   padding-top: var(--nav-height);
@@ -16,9 +16,12 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 80%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 46, 92, 0.65) 0%,
+    rgba(10, 46, 92, 0.55) 60%,
+    rgba(10, 46, 92, 0.75) 100%
+  );
 }
 
 .hero-content {
